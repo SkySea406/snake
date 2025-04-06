@@ -6,7 +6,7 @@ def baslat():
     if dif.type() != int:
         messagebox.showerror("Error", "Please enter a valid difficulty level.")
     else:
-        os.startfile("snake.py")
+        os.system("python snake.py")
         parent.destroy()
         exit()
 parent = tk.Tk()
