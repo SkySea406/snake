@@ -28,8 +28,8 @@ diff = tk.Label(parent, text="Enter Difficulty", bg="white")
 diff.pack()
 dife = tk.Entry(parent, bg="white")
 dife.pack()
-ok = tk.Button(parent, text="OK", command=baslat, bg="white")
-ok.pack()
+run = tk.Button(parent, text="Run", command=baslat, bg="white")
+run.pack()
 
 
 
