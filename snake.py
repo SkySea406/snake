@@ -21,8 +21,10 @@ deg = yon
 snake = [100,20]
 snakebody = [[100, 20], [90, 20], [80, 20]]
 puan = 0
-font = pygame.font.SysFont("Arial", 20)
 
+def skorgoster(skor, screen, font, pos=(10, 10)):
+    text = font.render(f"Skor: {skor}", True, (255, 255, 255))
+    screen.blit(text, pos)
 def randompos():
     return random.randrange(100, 601, 10), random.randrange(100, 401, 10)
 fx, fy = randompos()
@@ -65,12 +67,17 @@ while True:
     else:
         snakebody.pop()
         
-    text = font.render("Score: " + str(puan), True, (255, 255, 255))   
+    
+
+    
     screen.fill((0, 0, 0))
     key = pygame.key.get_pressed()
-    hitboxchar = []
+    
     for i in snakebody:
         pygame.draw.rect(screen, (0, 255, 0), (i[0], i[1], 10, 10))
     pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(fx, fy, 10, 10))
+    skorgoster(puan, screen, pygame.font.SysFont("Arial", 20), (10, 10))
     pygame.display.flip()
+    
     clock.tick(dif)
+
