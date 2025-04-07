@@ -10,15 +10,12 @@ pygame.display.set_caption("Snake Game")
 clock = pygame.time.Clock()
 try:
     dif = sys.argv[1]
-    if dif == "rainbow":
-        dif2 = 10
-        ctypes.windll.user32.MessageBoxW(0, "Rainbow mode activated.", "Info", 0x00000040)
 except IndexError:
     ctypes.windll.user32.MessageBoxW(0, "Please use the launcher.", "Error", 0x00000010)
     pygame.quit()
     exit()
-if dif !="rainbow":
-    dif = int(dif)
+
+dif = int(dif)
 yon = "asagi"
 deg = yon
 snake = [100,20]
@@ -73,14 +70,7 @@ while True:
     key = pygame.key.get_pressed()
     hitboxchar = []
     for i in snakebody:
-        if dif == "rainbow":
-            pygame.draw.rect(screen, (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)), (i[0], i[1], 10, 10))
-        else:
-            pygame.draw.rect(screen, (0, 255, 0), (i[0], i[1], 10, 10))
+        pygame.draw.rect(screen, (0, 255, 0), (i[0], i[1], 10, 10))
     pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(fx, fy, 10, 10))
     pygame.display.flip()
-    if dif =="rainbow":
-        clock.tick(dif2)
-    else:
-        clock.tick(dif)
-
+    clock.tick(dif)
