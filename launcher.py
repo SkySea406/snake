@@ -6,7 +6,7 @@ import os
 def baslat():
     dif = dife.get()
     
-    if not dif.isdigit() and dif != "rainbow":
+    if not dif.isdigit():
         messagebox.showerror("Error", "Please enter a valid difficulty level.")
         
     else:
