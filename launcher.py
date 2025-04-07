@@ -6,7 +6,7 @@ import os
 def baslat():
     dif = dife.get()
     
-    if not dif.isdigit():
+    if not dif.isdigit() and dif != "rainbow":
         messagebox.showerror("Error", "Please enter a valid difficulty level.")
         
     else:
@@ -21,20 +21,6 @@ parent = tk.Tk()
 parent.title("Launcher")
 parent.geometry("100x100")
 parent.resizable(False, False)
-parent.configure(bg="white")
-
-
-diff = tk.Label(parent, text="Enter Difficulty", bg="white")
-diff.pack()
-dife = tk.Entry(parent, bg="white")
-dife.pack()
-ok = tk.Button(parent, text="OK", command=baslat, bg="white")
-ok.pack()
-
-
-
-
-parent.mainloop()
 parent.configure(bg="white")
 
 
