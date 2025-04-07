@@ -13,7 +13,7 @@ def baslat():
         dir = os.path.dirname(os.path.realpath(__file__))
         snakedir = os.path.join(dir, "snake.py")
 
-        os.system("python "+snakedir)
+        os.system("python "+snakedir+" "+dif)
         parent.destroy()
         exit()
 parent = tk.Tk()
