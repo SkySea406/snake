@@ -1,11 +1,12 @@
 import time
 import pygame
 import random
+import sys
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Snake Game")
 clock = pygame.time.Clock()
-
+dif = sys,argv[1]
 yon = "asagi"
 deg = yon
 snake = [100,20]
@@ -55,5 +56,5 @@ while True:
         pygame.draw.rect(screen, (0, 255, 0), (i[0], i[1], 10, 10))
     pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(fx, fy, 10, 10))
     pygame.display.flip()
-    clock.tick(10)
+    clock.tick(dif)
 
