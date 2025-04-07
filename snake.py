@@ -6,7 +6,7 @@ pygame.init()
 screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Snake Game")
 clock = pygame.time.Clock()
-dif = sys,argv[1]
+dif = sys.argv[1]
 yon = "asagi"
 deg = yon
 snake = [100,20]
