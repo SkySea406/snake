@@ -6,7 +6,7 @@ import os
 def baslat():
     dif = dife.get()
     
-    if not dif.isdigit():
+    if not dif.isdigit() and dif != "2player":
         messagebox.showerror("Error", "Please enter a valid difficulty level.")
         
     else:
