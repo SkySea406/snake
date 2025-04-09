@@ -12,7 +12,7 @@ try:
     dif = sys.argv[1]
     if dif == "2player":
         dif = "2player"
-        dif2 = 10
+        dif2 = 20
 except IndexError:
     ctypes.windll.user32.MessageBoxW(0, "Please use the launcher.", "Error", 0x00000010)
     pygame.quit()
