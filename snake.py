@@ -12,7 +12,7 @@ try:
     dif = sys.argv[1]
     if dif == "2player":
         dif = "2player"
-        dif2 = 20
+        dif2 = 10
 except IndexError:
     ctypes.windll.user32.MessageBoxW(0, "Please use the launcher.", "Error", 0x00000010)
     pygame.quit()
@@ -36,6 +36,7 @@ def skorgoster(skor, screen, font, pos=(10, 10)):
 def randompos():
     return random.randrange(100, 601, 10), random.randrange(100, 401, 10)
 fx, fy = randompos()
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -111,6 +112,7 @@ while True:
             exit()
     if dif != "2player":
         if snake in snakebody[1:]:
+            
             pygame.quit()
             exit()
     snakebody.insert(0, list(snake))
